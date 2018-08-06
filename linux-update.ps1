@@ -2,14 +2,14 @@
 
 #Configuration
 $date = Get-Date
-$resourcegroup = "mag-e-linux-rg"           #Resource group where the Linux machines reside you want to update.
+$resourcegroup = ""           #Resource group where the Linux machines reside you want to update.
 $azureconnectioninfo = "AzureRunAsConnection" #Connection asset to the Azure subscription
-$linuxconnectioninfo = "linuxautomation@medadvgrp.com" #Automation connection name (authentication for each server)
-$azuresubscriptionid = "1e7b4083-3d34-4740-bad5-bd3f947539bc" #Azure subscription where the hosts are
+$linuxconnectioninfo = "" #Automation connection name (authentication for each server)
+$azuresubscriptionid = "" #Azure subscription where the hosts are
 $infocommand = "apt list --upgradable"      #Command to run to show what packages are being upgraded
 $upgradecommand = '' #'sudo apt-get update; sudo apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" dist-upgrade -y; sudo reboot' #Actual upgrade command.
-$emailfrom = "passwords@medadvgrp.com"      #The From address for the email
-$emailto = "mmason@medadvgrp.com"#,"asoyez@medadvgrp.com" #Can be a comma separated and quoted text list. E.X. "email1@medadvgrp.com","email2@medadvgrp.com"
+$emailfrom = ""      #The From address for the email
+$emailto = "" #Can be a comma separated and quoted text list. E.X. "email1@","email2@"
 $emailsubject = 'Monthly Linux Upgrades Run for $date'
 $emailsmtp = "smtp.office365.com"           #The SMTP server address to send from
 $emailport = 587                            #SMTP server port
